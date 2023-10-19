@@ -13,7 +13,6 @@ import {
 } from "../types/constants";
 import { z } from "zod";
 import { RenderControls } from "../components/RenderControls";
-import { Tips } from "../components/Tips/Tips";
 import { Spacing } from "../components/Spacing";
 
 const container: React.CSSProperties = {
@@ -35,11 +34,11 @@ const player: React.CSSProperties = {
 };
 
 const Home: NextPage = () => {
-  const [text, setText] = useState<string>(defaultMyCompProps.title);
+  const [text, setText] = useState<string>(defaultMyCompProps.username);
 
   const inputProps: z.infer<typeof CompositionProps> = useMemo(() => {
     return {
-      title: text,
+      username: text,
     };
   }, [text]);
 
@@ -78,7 +77,6 @@ const Home: NextPage = () => {
         <Spacing></Spacing>
         <Spacing></Spacing>
         <Spacing></Spacing>
-        <Tips></Tips>
       </div>
     </div>
   );
