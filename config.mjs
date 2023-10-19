@@ -6,7 +6,7 @@ import { VERSION } from "remotion/version";
  */
 export const REGION = "us-east-1";
 
-export const SITE_NAME = "my-next-app";
+export const SITE_NAME = "contributor-graph";
 export const RAM = 3009;
 export const DISK = 2048;
 export const TIMEOUT = 240;
