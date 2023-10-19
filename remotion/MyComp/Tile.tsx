@@ -27,8 +27,6 @@ export const Tile: React.FC<{
     durationInFrames: 30,
   });
 
-  console.log(spr, delay);
-
   return (
     <div
       style={{
