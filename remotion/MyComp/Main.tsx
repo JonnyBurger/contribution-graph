@@ -32,7 +32,9 @@ export const Main = ({ username }: z.infer<typeof CompositionProps>) => {
 
   const fetchData = useCallback(
     async (name: string) => {
-      const res = await fetch(`/api/github?username=${name}`);
+      const res = await fetch(
+        `https://contribution-graph-red.vercel.app/api/github?username=${name}`
+      );
       const json = await res.json();
       setData(json);
       continueRender(handle);
